@@ -20,6 +20,7 @@ function pingPong (number){
 $(document).ready(function(){
   $("form#pingpong").submit(function(event){
      event.preventDefault();
+     $('ul#output').empty();
      var number = parseInt($("input#number").val());
      var numbersToShow=pingPong(number);
      for (var i=0; i<number; i+=1){
