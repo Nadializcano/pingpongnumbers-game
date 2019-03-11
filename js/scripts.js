@@ -16,3 +16,14 @@ function pingPong (number){
    }
    return numbersToShow
 }
+
+$(document).ready(function(){
+  $("form#pingpong").submit(function(event){
+     event.preventDefault();
+     var number = parseInt($("input#number").val());
+     var numbersToShow=pingPong(number);
+     for (var i=0; i<number; i+=1){
+        $("ul#output").append('<li>' + numbersToShow[i] + "</li>");
+    }
+});
+});
